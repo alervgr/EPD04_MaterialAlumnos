@@ -23,4 +23,11 @@ def nnCostFunctionSinReg(nn_params_ini, input_layer_size, hidden_layer_size, num
 
         costeTotal += np.sum(y_dummies.iloc[i] * np.log(a3) + (1 - y_dummies.iloc[i]) * np.log(1 - a3))
 
+    # Con regularizacion
+
+    #coste_sinReg = -(1-len(X))* costeTotal
+    #sum1 = np.sum(np.sum( np.power(theta1[:, 1:], 2), axis=1)) # Suma por fila
+    #sum2 = np.sum(np.sum( np.power(theta2[:, 1:], 2), axis=1))
+    #J = coste_sinReg + (param_lambda / (2*m)) * (sum1+sum2)
+
     return -(1 / m) * costeTotal
