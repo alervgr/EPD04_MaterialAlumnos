@@ -7,6 +7,7 @@ from checkNNGradients import checkNNGradients
 from nnCostFunctionSinReg import nnCostFunctionSinReg
 from randInitializeWeights import randInitializeWeights
 from nnGradFunctionSinReg import *
+from predict import predict
 
 # from randInitializeWeights import randInitializeWeights
 # from nnGradFunctionSinReg import nnGradFunctionSinReg
@@ -105,5 +106,5 @@ theta2 = np.reshape(nn_params[hidden_layer_size * (input_layer_size + 1):], (num
 # the labels. You will now implement the "predict" function to use the
 # neural network to predict the labels of the training set. This lets
 # you compute the training set accuracy.
-# pred = predict(theta1, theta2, X, y)
-# print("Training Set Accuracy: ", np.mean(pred == y.flatten()) * 100)
+pred = predict(theta1, theta2, X, y)
+print("Training Set Accuracy: ", np.mean(pred == y.flatten()) * 100)
