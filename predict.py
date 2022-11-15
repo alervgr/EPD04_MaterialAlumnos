@@ -9,5 +9,6 @@ def predict(theta1, theta2, X):
         # La prediccion esta en las activaciones de la ultima capa (a3)
         arr_h.append(a3)
 
-    pred1 = np.argmax(arr_h, axis=1) + 1  # Da el maximo por fila
-    return pred1
+    pred1 = np.argmax(arr_h, axis=1)  # Da el maximo por fila
+    pred1_correcta = np.where(pred1 == 0, 10, pred1)
+    return pred1_correcta

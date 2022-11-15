@@ -107,4 +107,5 @@ theta2 = np.reshape(nn_params[hidden_layer_size * (input_layer_size + 1):], (num
 # neural network to predict the labels of the training set. This lets
 # you compute the training set accuracy.
 pred = predict(theta1, theta2, X, y)
+
 print("Training Set Accuracy: ", np.mean(pred == y.flatten()) * 100)
